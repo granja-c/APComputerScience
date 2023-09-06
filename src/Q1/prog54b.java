@@ -16,5 +16,15 @@ public class prog54b {
         int sum = n1 + n2 + n3 + n4;
         double avg = sum / 4.0;
 
+        System.out.println("Sum = " + sum);
+        System.out.print("Average = " + avg);
     }
 }
+/*
+First number: 5
+Second number: 6
+Third number: 7
+Fourth number: 8
+Sum = 26
+Average = 6.5
+ */
