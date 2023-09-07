@@ -6,7 +6,7 @@ public class prog58t {
         Scanner sc = new Scanner(System.in);
         System.out.print("Purchase price: ");
         double price = sc.nextDouble();
-        System.out.print("Amount recieved: ");
+        System.out.print("Amount received: ");
         double amt = sc.nextDouble();
 
         double chng = amt - price;
@@ -26,3 +26,13 @@ public class prog58t {
         System.out.printf("Pennies: " + (int)pns);
     }
 }
+/*
+Purchase price: 125.32
+Amount received: 140.00
+Change: 14.68
+Dollars: 14
+Quarters: 2
+Dimes: 1
+Nickles: 1
+Pennies: 3
+ */
