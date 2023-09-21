@@ -1,6 +1,6 @@
 package Q1;
 
-public class perog122c {
+public class prog122c {
     public static void main(String[] args) {
         int lcv = 2;
         int p1 = 0;
