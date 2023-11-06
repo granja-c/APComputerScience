@@ -1,10 +1,10 @@
-package Q1.prog213fCl;
+package Q2.Prog213fArray;
 
-public class Cl213f {
+public class Cl213fA {
     private int hrs;
     private double tot;
 
-    public Cl213f(int h) {
+    public Cl213fA(int h) {
         hrs = h;
         tot = 0;
     }
@@ -16,12 +16,7 @@ public class Cl213f {
     }
 
     public String toString() {
-        String str = String.format("The cost of %.2f is $%.2f", hrs, tot);
+        String str = String.format("The cost of %d is $%.2f", hrs, tot);
         return str;
     }
 }
-/*
-The cost of 1338 is $93.66
-The cost of 9631 is $521.55
-The cost of 13561 is $718.05
- */
