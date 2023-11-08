@@ -2,16 +2,16 @@ package Q2.Prog214bArray;
 
 public class Cl214bA {
     private int en;
-    private int ytdpay;
+    private double ytdpay;
     private double bprate;
     private double shiftcd;
-    private int hrs;
+    private double hrs;
     private double gross;
     private double with;
     private double fica;
     private double net;
 
-    public Cl214bA(int e, int y, double b, double s, int h) {
+    public Cl214bA(int e, double y, double b, double s, double h) {
         en = e;
         ytdpay = y;
         bprate = b;
@@ -32,8 +32,16 @@ public class Cl214bA {
         else with = gross * 0.175;
 
         if (ytdpay > 17300) fica = 0;
-        else if (ytdpay+gross > 17300) fica = gross * 0.0605;
-        else if (ytdpay )
+        else if (ytdpay+gross <= 17300) fica = gross * 0.0605;
+        else if (ytdpay < 17300 && ytdpay+gross > 17300) fica = (ytdpay + gross - 17300) * 0.0605;
+        net = gross - with - fica;
+    }
+
+    public String toString() {
+        String str = String.format("Employee number: %d\nHours: %.2f\tRate: %.2f\tShift Factor: %.2f\n" +
+                "Gross pay: %.2f\nWithholding: %.2f\nFICA: %.2f\nNet: %.2f\n",
+                en, hrs, bprate, shiftcd, gross, with, fica, net);
+        return str;
     }
 
 }

@@ -23,7 +23,7 @@ public class Prog213fArray {
                 list[lcv].calc();
             }
             for (int lcv = 0; lcv < cnt; lcv++) {
-                list[lcv].toString();
+                System.out.print(list[lcv].toString());
             }
 
         } catch (IOException e) {
