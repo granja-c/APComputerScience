@@ -27,7 +27,8 @@ public class Cl314 {
     }
 
     public String toString() {
-        String str = String.format("Awbrey\t%d\t%.2f\nMartinez\t%d\t%.2f\nTOTAL VOTERS: %.0f",
+        String str = String.format("Candidate\tVotes\tPercentage\n" +
+                        "Awbrey\t%d\t%.2f\nMartinez\t%d\t%.2f\nTOTAL VOTERS: %.0f",
                 atot, aperc, mtot, mperc, tot);
         return str;
     }
