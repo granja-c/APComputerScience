@@ -21,14 +21,13 @@ public class Cl314 {
     }
 
     public void calc() {
-        tot = atot+mtot;
-        aperc = atot / tot;
-        mperc = mtot / tot;
+        tot = atot + mtot;
+        aperc = atot / tot * 100;
+        mperc = mtot / tot * 100;
     }
 
     public String toString() {
-        String str = String.format("Candidate\tVotes\tPercentage\n" +
-                        "Awbrey\t%d\t%.2f\nMartinez\t%d\t%.2f\nTOTAL VOTERS: %.0f",
+        String str = String.format("Candidate\tVotes\tPercentage\nAwbrey\t%d\t%.2f\nMartinez\t%d\t%.2f\nTOTAL VOTERS: %.0f",
                 atot, aperc, mtot, mperc, tot);
         return str;
     }
