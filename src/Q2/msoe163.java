@@ -13,7 +13,15 @@ public class msoe163 {
         System.out.print("d: ");
         double d = sc.nextDouble();
 
-        double f = (n - 1) * ((1/r1) - (1/r2) + ((n-1)*d)/(n* r1*r2));
+        double f = 1 / ((n - 1) * ((1/r1) - (1/r2) + ((n-1)*d)/(n* r1*r2)));
         System.out.printf("f: %.2f", f);
     }
 }
+/*
+n: 56
+R1: 45
+R2: 54
+d: 87
+f: 0.47
+
+ */
