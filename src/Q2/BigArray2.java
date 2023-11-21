@@ -53,6 +53,7 @@ public class BigArray2 {
             for (Cat cat : cats) {
                 if (cat != null) printCat(cat);
             }
+
             Cat temp = cats[2];
             cats[2] = new Cat("Sugar", 23.6, 7, 33.25);
             cats[numcats] = temp;
@@ -61,8 +62,74 @@ public class BigArray2 {
             Cat temp2 = cats[1];
             cats[1] = cats[3];
             cats[3] = temp2;
+
+            System.out.println("\nThe updated list is: ");
+            for (Cat cat : cats) {
+                if (cat != null) printCat(cat);
+            }
+            System.out.println();
+
+            int i = 0;
+            while (i < numcats) {
+                if (cats[i].getCost() < 26) {
+                    for (int j = i; j < numcats-1; j++) {
+                        cats[j] = cats[j+1];
+                        numcats--;
+                    }
+                } else {
+                    i++;
+                }
+            }
+            System.out.println("Cat prices above $26: ");
+            for (int lcv = 0; lcv < numcats; lcv++) {
+                System.out.print(cats[lcv].getCost() + " ");
+            }
+            System.out.println();
+
+            for (int lcv = 0; lcv < numcats; lcv++) {
+                if (cats[lcv].getWeight() > 15) System.out.print(cats[lcv].getName() + "\t");;
+            }
+            System.out.println();
+
         } catch (IOException e) {
             System.out.println("Can't find data file");
         }
     }
 }
+/*
+All the Cats:
+Name	Weight	Age	Cost
+Inky	15.69	2	35.79
+Panda	14.3	6	15.03
+Rascal	21.1	21	0.0
+Blacky	13.99	3	26.89
+Taffy	24.5	10	56.89
+Toby	17.2	10	37.57
+The third cat is named: Rascal
+The updated weight is: 27.2
+
+The updated list is:
+Name	Weight	Age	Cost
+Inky	15.69	2	35.79
+Angel	3.6	1	25.99
+Panda	14.3	6	15.03
+Blacky	13.99	3	26.89
+Taffy	24.5	10	56.89
+Toby	27.2	10	37.57
+Gimpy	14.3	10	29.99
+
+The updated list is:
+Inky	15.69	2	35.79
+Blacky	13.99	3	26.89
+Sugar	23.6	7	33.25
+Angel	3.6	1	25.99
+Taffy	24.5	10	56.89
+Toby	27.2	10	37.57
+Gimpy	14.3	10	29.99
+Panda	14.3	6	15.03
+
+Cat prices above $26:
+35.79 26.89 33.25 56.89 37.57 37.57
+Inky	Sugar	Taffy	Toby
+
+ */
