@@ -19,5 +19,21 @@ public class LP39 {
         int cmonth = sc.nextInt();
         System.out.print("Day: ");
         int cday = sc.nextInt();
+
+        Cl39 cl = new Cl39(byr, bmonth, bday, cyr, cmonth, cday);
+        cl.calc();
+        System.out.println(cl);
     }
 }
+/*
+Enter your birthdate:
+Year: 1980
+Month: 3
+Day: 2
+Enter the date today:
+Year: 2000
+Month: 4
+Day: 4
+You've been alive for 7332 days
+You've slept for 58656 hours
+ */
