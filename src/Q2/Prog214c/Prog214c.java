@@ -9,14 +9,14 @@ public class Prog214c {
         try {
             Scanner sc = new Scanner(new File("Langdat/prog214c.dat"));
             ArrayList<Cl214c> bills = new ArrayList<Cl214c>();
-            String type = "";
+            String gr = "";
             double gals = 0;
             String wash = "";
             while (sc.hasNext()) {
-                type = sc.next();
+                gr = sc.next();
                 gals = sc.nextDouble();
                 wash = sc.next();
-                Cl214c b = new Cl214c(type, gals, wash);
+                Cl214c b = new Cl214c(gr, gals, wash);
                 bills.add(b);
             }
             for (int lcv = 0; lcv < bills.size(); lcv++) {

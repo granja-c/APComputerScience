@@ -12,7 +12,7 @@ public class IntArrayList {
         myCapacity = DEFAULT_SIZE;
     }
     private void doubleCapacity() {
-        myCapacity *= 2;
+        myCapacity = myCapacity *  2;
         int[] tempArray = new int[myCapacity];
         for (int lcv = 0; lcv < mySize; lcv++){
             tempArray[lcv] = myArray[lcv];

@@ -1,6 +1,5 @@
 package Q2.ArrayListLab;
 import java.util.*;
-
 public class myArrayListLab {
     public static void main(String[] args) {
         IntArrayList list = new IntArrayList();

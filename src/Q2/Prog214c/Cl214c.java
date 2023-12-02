@@ -41,7 +41,7 @@ public class Cl214c {
     }
     public String toString() {
         String str = String.format("COMPSCI PETROLEUM COMPANY\n---------------------------------------\n" +
-                        "%s\t%.1f gallons @ %.3f\nGasoline\t\t\t\t\t%.2f\nWash %s\t\t\t\t\t\t%.2f\nTotal Due\t\t\t\t\t%.2f\n" +
+                        "%s\t%.1f gallons @ $%.3f\nGasoline\t\t\t\t\t%.2f\nWash %s\t\t\t\t\t\t%.2f\nTotal Due\t\t\t\t\t%.2f\n" +
                         "---------------------------------------\n",
                 type, gallons, ppg, gasprice, wash, washprice, total);
         return str;
