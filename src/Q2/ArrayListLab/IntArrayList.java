@@ -14,5 +14,5 @@ public class IntArrayList {
     private void doubleCapacity() {
 
     }
-    private void
 }
+// thing !!
