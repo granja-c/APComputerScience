@@ -15,6 +15,7 @@ public class Prog215h {
                 for (int lcv = 0; lcv < score.length; lcv++) {
                     score[lcv] = sc.nextDouble();
                 }
+                Cl215h cont = new Cl215h(score);
                 list.add(cont);
             }
             for (int lcv = 0; lcv < list.size(); lcv++) {
