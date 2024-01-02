@@ -48,6 +48,19 @@ public class BigArrayList {
             for (Cat c : cats) {
                 System.out.print(c.getName() + "\t");
             }
+
+            for (int lcv = 0; lcv < cats.size(); lcv++) {
+                if (cats.get(lcv).getCost() < 26) {
+                    cats.remove(lcv);
+                    lcv--;
+                }
+            }
+            System.out.println("Costs of remaining cats: ");
+            for (Cat c : cats) {
+                System.out.print(c.getCost() + "\t");
+            }
+            System.out.println();
+
             System.out.println();
             System.out.println("Cats being put on a diet are: ");
             for (int lcv = 0; lcv < cats.size(); lcv++) {
@@ -63,3 +76,29 @@ public class BigArrayList {
         }
     }
 }
+/*
+All cats:
+Name	Weight	Age	Cost
+Inky	15.69	235.79
+Panda	14.3	615.03
+Rascal	21.1	210.0
+Blacky	13.99	326.89
+Taffy	24.5	1056.89
+Toby	17.2	1037.57
+The third cat: Q2.Cat@25f38edc
+Last cat's new weight: Q2.Cat@1a86f2f1
+Inky	15.69	235.79
+Angel	3.6	125.99
+Panda	14.3	615.03
+Blacky	13.99	326.89
+Taffy	24.5	1056.89
+Toby	27.2	1037.57
+Gimpy	14.3	1029.99
+Cat names:
+Inky	Blacky	Sugar	Angel	Taffy	Toby	Gimpy	Costs of remaining cats:
+35.79	26.89	33.25	56.89	37.57	29.99
+
+Cats being put on a diet are:
+Inky	Sugar	Taffy	Toby
+
+ */
