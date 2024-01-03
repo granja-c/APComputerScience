@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Prog464d {
+    /**
+     * performs matrix transposition on a 2D array of integers.
+     * @param mat the 2D array to be transposed.
+     * @return The transposition of {@code mat}
+     */
     public static int[][] transpose(int[][] mat) {
         int[][] transposed = new int[mat[0].length][mat.length];
         for (int row = 0; row < mat.length; row++) {
