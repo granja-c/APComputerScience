@@ -34,9 +34,9 @@ public class Prog464d {
                 System.out.println();
             }
             System.out.println("Transposed: ");
-            for (int[] row : mattr) {
-                for (int num : row) {
-                    System.out.print(num + " ");
+            for (int row = 0; row < mattr.length; row++) {
+                for (int col = 0; col < mattr[0].length; col++) {
+                    System.out.print(mattr[row][col] + " ");
                 }
                 System.out.println();
             }
