@@ -2,18 +2,16 @@ package Q3.Prog702p;
 
 public class Animal implements AnimalNames {
     private String name;
-    private String favW;
+    private String word;
 
-    public Animal(String fn, String ln, String fw) {
-        name = fn + ln;
-        favW = fw;
+    public Animal(String fn, String w) {
+        name = fn;
+        word = w;
     }
 
     public String getName() {
-        return name;
+        return name + " " + word;
     }
+    public String getWord() { return word; }
 
-    public String getWord() {
-        return favW;
-    }
 }
