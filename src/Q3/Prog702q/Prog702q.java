@@ -17,27 +17,30 @@ public class Prog702q {
             Scanner sc = new Scanner(new File("Langdat/prog702q.dat"));
             List<Vehicle> list = new ArrayList<>();
             int num = sc.nextInt();
-
             while (sc.hasNext()){
                 String name = sc.next();
                 int tires = sc.nextInt();
 
-//                if (num == 1) {
-//                    double gpa = sc.nextDouble();
-//                    Vehicle p = new Car(fn, ln, gpa);
-//                    list.add(p);
-//                } else if (num == 2) {
-//                    int numStu = sc.nextInt();
-//                    Vehicle p = new Truck(fn, ln, numStu);
-//                    list.add(p);
-//                } else if (num == 3) {
-//                    String favw = sc.next();
-//                    Vehicle p = new Bus(fn, ln, favw);
-//                    list.add(p);
-//                }
+                if (num == 1) {
+                    double val = sc.nextDouble();
+                    Vehicle p = new Car(name, tires, val);
+                    list.add(p);
+                } else if (num == 2) {
+                    int miles = sc.nextInt();
+                    Vehicle p = new Truck(name, tires, miles);
+                    list.add(p);
+                } else if (num == 3) {
+                    String city = sc.next();
+                    Vehicle p = new Bus(name, tires, city);
+                    list.add(p);
+                }
                 num = sc.nextInt();
             }
 
+            System.out.println("Total number of vehicles: " + list.size());
+            System.out.println("Total value of cars: ");
+            System.out.println("Total value of trucks: ");
+            System.out.println("Longest home name for buses: ");
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
