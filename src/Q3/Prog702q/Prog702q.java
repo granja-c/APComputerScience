@@ -14,7 +14,7 @@ import java.util.List;
 public class Prog702q {
     public static void main(String[] args) {
         try {
-            Scanner sc = new Scanner(new File("Langdat/prog702q.dat"));
+            Scanner sc = new Scanner(new File("Langdat/prog702q.txt"));
             List<Vehicle> list = new ArrayList<>();
             int num = sc.nextInt();
             while (sc.hasNext()){
