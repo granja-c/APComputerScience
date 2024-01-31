@@ -37,10 +37,37 @@ public class Prog702q {
                 num = sc.nextInt();
             }
 
+            double cTotVal = 0;
+            int cTotTires = 0;
+            String longest = "";
+            int bTotTires = 0;
+            double tTotVal = 0;
+            int tTotTires = 0;
+            for (Vehicle x : list) {
+                if (x instanceof Car) {
+                    cTotVal += x.getValue();
+                    cTotTires += x.getTires();
+                }
+                if (x instanceof Bus) {
+                    bTotTires += x.getTires();
+                    if (((Bus) x).getCity().length() > longest.length()) {
+                        longest = ((Bus) x).getCity();
+                    }
+                }
+                if (x instanceof Truck) {
+                    tTotVal += x.getValue();
+                    tTotTires += x.getTires();
+                }
+            }
+
             System.out.println("Total number of vehicles: " + list.size());
-            System.out.println("Total value of cars: ");
-            System.out.println("Total value of trucks: ");
-            System.out.println("Longest home name for buses: ");
+            System.out.println("Total value of cars: " + cTotVal);
+            System.out.println("Total value of trucks: " + tTotVal);
+            System.out.println("Longest home name for buses: " + longest);
+            System.out.println("Number of car tires: " + cTotTires);
+            System.out.println("Number of bus tires: " + bTotTires);
+            System.out.println("Number of truck tires: " + tTotTires);
+            
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
