@@ -1,3 +1,4 @@
+package Q4.Prog7300p;
 import java.util.function.Function;
 
 public class Perceptron {
@@ -47,7 +48,7 @@ public class Perceptron {
                 }
                 bias += lrate * error;
             }
-            System.out.println("Ep " + (ep+1) + ": Loss: " + (loss/n));
+            System.out.println("Epoch " + (ep+1) + ": Loss: " + (loss/n));
         }
     }
 }
