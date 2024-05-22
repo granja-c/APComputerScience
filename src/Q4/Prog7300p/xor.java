@@ -33,3 +33,4 @@ public class xor {
         System.out.println("XOR Prediction: " + Arrays.toString(and.predict(xor_train)));
     }
 }
+// what
