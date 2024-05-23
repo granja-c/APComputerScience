@@ -6,7 +6,7 @@ public class Perceptron {
     private int epochs;
     private double[] weights;
     private double bias;
-    private Function<Double, Double> activ;
+    private Function<Double, Double> activ; // activation
 
     private Double unit_step(Double x) { return x > 0 ? 1.0 : 0.0; }
 
