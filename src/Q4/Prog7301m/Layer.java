@@ -1,3 +1,5 @@
+package Q4.Prog7301m;
+
 public class Layer {
     class Neuron {
         public double[] weights;
@@ -21,7 +23,7 @@ public class Layer {
         neurons = new Neuron[n];
         Size = n;
         for (int i = 0; i < Size; i++) {
-            Neurons[i] = new Neuron(s);
+            neurons[i] = new Neuron(s);
         }
     }
 }

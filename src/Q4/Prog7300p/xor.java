@@ -1,5 +1,6 @@
 package Q4.Prog7300p;
 import java.util.Arrays;
+
 public class xor {
     public static void main(String[] args) {
         double[][] X_train = {
