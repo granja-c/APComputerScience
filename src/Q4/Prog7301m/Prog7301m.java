@@ -42,6 +42,13 @@ public class Prog7301m {
         }
         return arr;
     }
+    public static void normalize(double[][] data, double max) {
+        for (int r = 0; r < data.length; r++) {
+            for (int c = 0; c < data[r].length; c++) {
+                data[r][c] /= max;
+            }
+        }
+    }
 
     public static void main(String[] args) {
         final int N_CLASSES = 10;
