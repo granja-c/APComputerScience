@@ -1,4 +1,5 @@
 package Q4.Prog7301m;
+import java.util.Arrays;
 
 public class NeuralNetworkTest {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class NeuralNetworkTest {
         for (int i = 0; i < X_train.length; i++) {
             double res[] = model.predict(X_train[i]);
             System.out.printf("Input: %s\tOutput: %.6f\n",
-                    Arrays.toString(x), result[0]);
+                    Arrays.toString(X_train), res[0]);
         }
         System.out.println("Final accuracy: " + model.accuracy(X_train, y_train));
     }
