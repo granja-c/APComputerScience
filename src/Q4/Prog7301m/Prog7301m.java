@@ -65,6 +65,10 @@ public class Prog7301m {
         double[][] X_test = toArray(Xte);
         double[][] y_test = toArray(yte);
 
+        final double MAX_VAL = 255;
+        normalize(X_train, MAX_VAL);
+        normalize(X_test, MAX_VAL);
+
         final int N_INPUT = X_train[0].length;
 
         var model = new MultiLayerPerceptron(new int[]{N_INPUT, 100, N_CLASSES}, 0.1, new Activations.Sigmoid());
@@ -82,7 +86,7 @@ public class Prog7301m {
         var img = new BufferedImage(28, 28, BufferedImage.TYPE_INT_RGB);
         for (int r = 0; r < 28; r++) {
             for (int c = 0; c < 28; c++) {
-                img.setRGB(c, r, (int)(X_val[r * 28 + c]));
+                img.setRGB(c, r, (int)(X_val[r * 28 + c] * MAX_VAL));
             }
         }
         var frame = new JFrame("Image");
