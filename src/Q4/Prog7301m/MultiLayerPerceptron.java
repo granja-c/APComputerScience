@@ -1,6 +1,8 @@
 package Q4.Prog7301m;
 
-public class MultiLayerPerceptron {
+import java.io.*;
+
+public class MultiLayerPerceptron implements Serializable {
     private double fLRate;
     private Layer[] fLayers;
     private Activations.Activation fActivation;
@@ -85,4 +87,21 @@ public class MultiLayerPerceptron {
             System.out.printf("Epoch %d\tLoss: %.6f\t\tAccuracy: %.6f\n", (ep+1), loss, accuracy(X_train, y_train));
         }
     }
+    public void saveMod(String fname) {
+        try (var out = new ObjectOutputStream(new FileOutputStream(fname))) {
+            out.writeObject(this);
+        } catch (IOException e) {
+            System.out.println("Error Saving");
+        }
+    }
+    public static MultiLayerPerceptron loadMod(String fname) {
+        try (var in = new ObjectInputStream(new FileInputStream(fname))) {
+            return (MultiLayerPerceptron) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error loading");
+            return null;
+        }
+
+    }
+
 }

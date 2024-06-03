@@ -1,7 +1,9 @@
 package Q4.Prog7301m;
 
-public class Layer {
-    class Neuron {
+import java.io.Serializable;
+
+public class Layer implements Serializable {
+    class Neuron implements Serializable {
         public double[] weights;
         public double bias;
         public double value;

@@ -1,7 +1,9 @@
 package Q4.Prog7301m;
 
+import java.io.Serializable;
+
 public class Activations {
-    interface Activation {
+    interface Activation extends Serializable {
         public double activate(double val);
         public double activateDeriv(double val);
     }
