@@ -94,14 +94,13 @@ public class MultiLayerPerceptron implements Serializable {
             System.out.println("Error Saving");
         }
     }
-    public static MultiLayerPerceptron loadMod(String fname) {
-        try (var in = new ObjectInputStream(new FileInputStream(fname))) {
+    public static MultiLayerPerceptron loadModel(String filename) {
+        try (var in = new ObjectInputStream(new FileInputStream(filename))) {
             return (MultiLayerPerceptron) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error loading");
+            System.out.println("Error loading model!");
             return null;
         }
-
     }
 
 }
